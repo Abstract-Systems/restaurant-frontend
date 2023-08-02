@@ -14,6 +14,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/staff_dashboard.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -232,7 +233,12 @@ class _AnimatedButtonsState extends State<AnimatedButtons>
             Transform.translate(
               offset: Offset(0, _animation.value),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StaffDashboard()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green.shade300,
                   padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
